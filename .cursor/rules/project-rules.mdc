@@ -1,0 +1,30 @@
+---
+description: 
+globs: 
+alwaysApply: false
+---
+# Project Goal
+Build a minimal, modern Java 17 + Spring Boot 3.x project using MyBatis for persistence and PostgreSQL as the database.
+
+# Stack and Tools
+- Java 17
+- Spring Boot 3.x
+- MyBatis (XML-based mappers)
+- PostgreSQL via Testcontainers (Docker-based, no manual DB setup)
+- Spock + Groovy for testing
+- Maven as build tool
+
+# Features to Include
+- Simple domain model: `User` entity with `id`, `name`, `email`
+- Basic CRUD operations using MyBatis Mapper interfaces + XML
+- `application.yml` configuration for PostgreSQL
+- Integration testing using Spock and Testcontainers
+- Clean, educational folder structure
+- Minimal README with setup & run instructions
+
+# Guidelines
+- Focus on clarity and best practices
+- Keep it simple but production-aligned
+- Use Spring Initializr to generate project base
+
+- Optimize for learning and clean code
