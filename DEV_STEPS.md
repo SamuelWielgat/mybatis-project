@@ -73,14 +73,17 @@ src/main/resources/
 
 ## Step 5: MyBatis Setup
 
-1. Create UserMapper interface in `src/main/java/com/example/mybatis/mapper/UserMapper.java`
-2. Create corresponding XML mapper file in `src/main/resources/mapper/UserMapper.xml`
-3. Implement basic CRUD operations:
-   - insert
-   - selectById
-   - selectAll
-   - update
-   - delete
+1. Create UserMapper interface in `src/main/java/com/example/mybatis/mapper/UserMapper.java`:
+
+   - Add `@Mapper` annotation
+   - Implement CRUD operations using MyBatis annotations:
+     - `@Insert` for insert
+     - `@Select` for selectById and selectAll
+     - `@Update` for update
+     - `@Delete` for delete
+   - Use `@Options(useGeneratedKeys = true)` for ID generation
+
+2. No XML mapper files needed - using annotation-based approach for cleaner code
 
 ## Step 6: Service Layer
 
