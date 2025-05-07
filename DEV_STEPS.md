@@ -87,11 +87,16 @@ src/main/resources/
 
 ## Step 6: Service Layer
 
-1. Create UserService interface
-2. Implement UserServiceImpl with:
-   - CRUD operations
-   - Business logic
-   - Error handling
+1. Create UserService interface in `src/main/java/com/example/mybatis/service/UserService.java`:
+
+   - Define CRUD operation methods
+   - Clear method naming convention
+
+2. Implement UserServiceImpl in `src/main/java/com/example/mybatis/service/UserServiceImpl.java`:
+   - Add `@Service` and `@Transactional` annotations
+   - Use constructor injection for UserMapper
+   - Add `@Transactional(readOnly = true)` for query methods
+   - Implement all interface methods
 
 ## Step 7: REST Controller
 
