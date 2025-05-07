@@ -1,9 +1,9 @@
 spring:
   datasource:
-    driver-class-name: org.testcontainers.jdbc.ContainerDatabaseDriver
-    url: jdbc:tc:postgresql:16-alpine:///mybatis_db
-    username: test
-    password: test
+    url: jdbc:postgresql://localhost:5432/mybatis_db
+    username: postgres
+    password: postgres
+    driver-class-name: org.postgresql.Driver
   sql:
     init:
       mode: always
@@ -13,8 +13,6 @@ mybatis:
   type-aliases-package: com.example.mybatis.domain
   configuration:
     map-underscore-to-camel-case: true
-    default-fetch-size: 100
-    default-statement-timeout: 30
 
 logging:
   level:

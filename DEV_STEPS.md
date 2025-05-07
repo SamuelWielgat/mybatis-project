@@ -69,7 +69,16 @@ src/main/resources/
    - Configure MyBatis settings
    - Add logging configuration
 
-2. Create database migration scripts (if needed)
+2. Create database migration scripts:
+
+   - Add `schema.sql` for table creation
+   - Set `spring.sql.init.mode: always` to run on startup
+
+3. Set up PostgreSQL with Docker:
+   - Create `docker-compose.yml` for PostgreSQL container
+   - Use lightweight Alpine image
+   - Configure database name, user, and password
+   - Map port 5432
 
 ## Step 5: MyBatis Setup
 
