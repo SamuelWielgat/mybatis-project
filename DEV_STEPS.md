@@ -100,11 +100,17 @@ src/main/resources/
 
 ## Step 7: REST Controller
 
-1. Create UserController with:
-   - CRUD endpoints
-   - Proper HTTP methods
-   - Request/Response DTOs
-   - Error handling
+1. Create DTO in `src/main/java/com/example/mybatis/dto/UserDTO.java`:
+
+   - Add validation annotations
+   - Separate API contract from domain model
+
+2. Create UserController in `src/main/java/com/example/mybatis/controller/UserController.java`:
+   - Add `@RestController` and base URL mapping
+   - Implement CRUD endpoints with proper HTTP methods
+   - Use `ResponseEntity` for HTTP responses
+   - Add DTO-Entity conversion methods
+   - Use constructor injection for service
 
 ## Step 8: Testing Setup
 
