@@ -126,16 +126,19 @@ src/main/resources/
 1. Add test dependencies to `pom.xml`:
 
    - Spock Framework
+   - Groovy
    - Testcontainers
    - Spring Boot Test
 
-2. Create test structure:
+2. Create test configuration in `src/test/groovy/com/example/mybatis/config/TestConfig.groovy`:
 
-```
-src/test/groovy/com/example/mybatis/
-├── integration/    # Integration tests
-└── unit/          # Unit tests
-```
+   - Configure Testcontainers for PostgreSQL
+   - Set up test datasource
+
+3. Create integration test in `src/test/groovy/com/example/mybatis/integration/UserIntegrationSpec.groovy`:
+   - Use Spock framework
+   - Test user creation and retrieval
+   - Use given/when/then blocks for clear test structure
 
 ## Step 9: Integration Tests
 
